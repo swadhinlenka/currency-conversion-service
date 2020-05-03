@@ -1,0 +1,18 @@
+server:
+  port: 8100
+spring: 
+  application:
+    name: currency-conversion-service
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+#currency-exchange-service:
+  #ribbon:
+    #listOfServers: http://localhost:8000,http://localhost:8001
+#http://localhost:8100/currency-converter-feign/from/EUR/to/INR/quantiry/100
+#http://localhost:8765/currency-conversion-service/currency-converter-feign/from/EUR/to/INR/quantiry/100
